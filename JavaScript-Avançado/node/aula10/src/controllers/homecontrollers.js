@@ -1,12 +1,5 @@
 exports.paginaInicial = (req, res) => {
-    res.send(
-        `
-            <form action="/" method="POST">
-                Nome Do Cliente: <input name="nome" type="text">
-                <button>Enviar Formulario</button>
-            </form>
-        `
-    )
+    res.render('index') // aqui eu estou rendenizando a pagina index da views
 }
 
 exports.trataPost = (req, res) => {
