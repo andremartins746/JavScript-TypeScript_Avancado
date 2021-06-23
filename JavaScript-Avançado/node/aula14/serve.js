@@ -8,7 +8,6 @@ const mongoose = require('mongoose')
 
 mongoose.connect(process.env.conectionString, {useNewUrlParser: true, useUnifiedTopology: true})
     .then(() => {
-        console.log('conectei á base de dados')
         app.emit('pronto') // emitir uma evento quando estiver pronto
     })
     .catch((e) => console.log(e))
@@ -29,6 +28,6 @@ app.set('view engine', 'ejs')
 app.use(routes)// aqui eu falo para o app usar as minhas rotas que eu separei
 
 // escutar na porta
-app.on('pronto', ()=> { // quando o evento estiver pronto execultar!
+app.on('pronto', () => { // quando o evento estiver pronto execultar!
     app.listen(3003, () => console.log(' http://localhost:3003  rodando com sucesso'))
 })
