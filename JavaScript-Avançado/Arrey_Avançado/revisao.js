@@ -21,3 +21,4 @@ const nome = ['André', 'Martins', 'Pereira']
 
 const novoNome = nome.join(' ')
 console.log(novoNome)
+console.table(novoNome)
